@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Русские пароли</string>
     <string name="help_text">Введите пароль в русской раскладке</string>
+    <string name="clipboard_title">пароль</string>
+    <string name="message_copied">Скопировано в буфер обмена</string>
 
     <string-array name="russian">
         <item>й</item>
