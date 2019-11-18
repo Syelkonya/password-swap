@@ -8,6 +8,7 @@ public class PasswordsHelper {
 
     private final Map<Character, Character> russianToLatin = new HashMap<>();
 
+
     public PasswordsHelper(String[] russians, String[] latins) {
         if (russians.length != latins.length) {
             throw new IllegalArgumentException();
@@ -16,8 +17,6 @@ public class PasswordsHelper {
         for (int i = 0; i < russians.length; i++) {
             russianToLatin.put(russians[i].charAt(0), latins[i].charAt(0));
         }
-
-
     }
 
     public String convert(CharSequence source) {
@@ -35,5 +34,9 @@ public class PasswordsHelper {
             }
         }
         return result.toString();
+    }
+
+    public int getQuality(CharSequence password){
+        return Math.min(password.length(), 10);
     }
 }

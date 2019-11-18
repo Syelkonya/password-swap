@@ -14,11 +14,12 @@
         android:textAppearance="@android:style/TextAppearance.Medium" />
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_result"
         android:layout_marginBottom="@dimen/margin_result"
+        android:background="@drawable/result_background"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -26,7 +27,9 @@
             android:id="@+id/result_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/quality"
             android:textAppearance="@style/ResultTextAppearence"
             tools:text="heufewf" />
 
@@ -34,15 +37,40 @@
             android:id="@+id/button_copy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:padding="@dimen/copy_button_padding"
-            android:src="@drawable/ic_content_copy_black_24dp" />
+            android:src="@drawable/ic_content_copy_black_24dp"
+            android:ellipsize = "end"
+            android:singleLine = "true"
 
-    </LinearLayout>
+            />
+
+        <ImageView
+            android:id="@+id/quality"
+            android:layout_width="@dimen/indicator_width"
+            android:layout_height="@dimen/indicator_height"
+            android:layout_below="@+id/result_text"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/activity_padding"
+            android:src="@drawable/quality_indicator" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           />
+
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/source_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="ругауца" />
+
+    <CheckBox
+        android:id="@+id/check_uppercase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/check_uppercase"/>
 
 </LinearLayout>
