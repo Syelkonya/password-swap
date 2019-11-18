@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">Русские пароли</string>
-    <string name="help_text">Введите пароль в русской раскладке</string>
+    <string name="help_text">Введите пароль в русской раскладке и получите \"английский аналог\"</string>
     <string name="clipboard_title">пароль</string>
     <string name="message_copied">Скопировано в буфер обмена</string>
     <string name="quality_hint">(качество)</string>
+    <string name="edit_hint_text">Введите пароль</string>
+    <string name="check_uppercase">Заглавные</string>
+    <string name="article_to_generate_text">Сгенерируйте новый сесурный пароль при необходимости</string>
+    <string name="add_numbers">Цифры</string>
+    <string name="add_special_symbols">Специальные символы</string>
+    <string name="to_generate_password">Сгенерировать пароль</string>
+    <string name="hint_for_length_of_password">8 символов</string>
 
 
     <string-array name="qualities">
@@ -90,5 +97,13 @@
         <item>.</item>
     </string-array>
 
+
+    <plurals name="symbols">
+        <item quantity="one">%1$d cимвол</item>
+        <item quantity="two">%1$d символа</item>
+        <item quantity="few">%1$d символа</item>
+        <item quantity="many">%1$d символов</item>
+        <item quantity="other">%1$d символов</item>
+    </plurals>
 
 </resources>

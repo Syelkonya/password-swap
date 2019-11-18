@@ -7,4 +7,5 @@
     <dimen name="result_stroke_width">4dp</dimen>
     <dimen name="indicator_width">128dp</dimen>
     <dimen name="indicator_height">32dp</dimen>
+    <dimen name="margin_for_artical_of_generation_password">44dp</dimen>
 </resources>
