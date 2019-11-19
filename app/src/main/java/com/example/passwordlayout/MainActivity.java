@@ -110,9 +110,12 @@ public class MainActivity extends Activity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 String symbols = getResources()
-                        .getQuantityString(R.plurals.symbols, progress+8, progress);
+                        .getQuantityString(R.plurals.symbols, progress, progress);
+
                 symbolsInt = Integer.parseInt(symbols.replaceAll("\\D","")) + 8;
-                lengthOfPassword.setText(symbolsInt + symbols.replaceAll("\\d",""));
+
+                lengthOfPassword.setText("8 символов + " + symbols +  " = " +
+                        symbolsInt + " символов");
 
             }
 
