@@ -1,7 +1,9 @@
 package com.example.passwordlayout;
 
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class PasswordGenerator {
@@ -25,28 +27,33 @@ public class PasswordGenerator {
 
     public String generate(boolean checkUppercase, boolean addNumbers,
                            boolean addSpecialSymbols, int length){
-        Set<Character> set = new HashSet<>();
+        StringBuilder sb = new StringBuilder();
+        List<Character> list = new ArrayList<>();
         for (int i = 0; i <= length;) {
             if (checkUppercase && (Math.random() > 0.5)){
-                set.add(Character.toUpperCase(generateLetter()));
+                list.add(Character.toUpperCase(generateLetter()));
                 i++;
             }
             if (addNumbers && (Math.random() > 0.5)){
-                set.add(generateNumber());
+                list.add(generateNumber());
                 i++;
             }
             if (addSpecialSymbols && (Math.random() > 0.5)){
-                set.add(generateSymbol());
+                list.add(generateSymbol());
                 i++;
             }
             if (Math.random() > 0.5){
-                set.add(generateLetter());
+                list.add(generateLetter());
                 i++;
             }
         }
 
+        for (int i = 0; i < length ; i++) {
+            sb.append(list.get(i));
+        }
 
-        return set.toString()
+
+        return sb.toString()
                 .replace(",","")
                 .replace(" ","")
                 .replace("[", "")
